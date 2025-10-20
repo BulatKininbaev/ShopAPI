@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        {% include 'head.html' %}
+</head>
+<body>
+    <header>
+ 	<div align="left">
+                <img src="{% static 'image/logo.png' %}"  alt="My logo" loading="lazy">
+    </div>
+    <div  align="center" ><h2>Мы дарим Вам не технику а удовольствие</h2></div>
+    <div class="phone1 show_phone_icon" align="right">8 800 333 22 33</div>
+    </header>
+    <main>
+
+        Мы открыты всегда по адресам :
+
+        <li>Москва</li>
+        <li>Ньюйорк</li>
+        <li>Лондон</li>
+        <li>Сиэтл</li>
+        <li>Пекин</li>
+        <li>Ньювасюки</li>
+
+    </main>
+
+   <footer class="bg-dark text-white text-center py-3">
+        {% include 'footer.html' %}
+   </footer>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

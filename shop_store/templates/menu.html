@@ -1,0 +1,30 @@
+<main>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid" bis_skin_checked="1">
+        <a class="navbar-brand" href="#">Мой девайс</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" bis_skin_checked="1">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about">О нас </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Наши цены</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Каталог
+              </a>
+              <ul class="dropdown-menu">
+                {% for imenu in content %}
+                    <li><a class="dropdown-item" href="{% url 'products' imenu.id %}">{{ imenu.name }}</a></li>
+                {% endfor  %}
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</main>
