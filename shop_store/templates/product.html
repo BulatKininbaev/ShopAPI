@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+        {% include 'head.html' %}
+</head>
+
+<main>
+
+
+    {% block content %}
+    <p>Категория: {{prod.category.name}}</p>
+    <p>Наименование: {{prod.name}}</p>
+    <p>Описание: {{prod.description}}</p>
+    <p>Цена: {{prod.price}}</p>
+    {% endblock %}
+
+</main>
+
+ <footer class="bg-dark text-white text-center py-3">
+        {% include 'footer.html' %}
+ </footer>
+</html>
