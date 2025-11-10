@@ -16,6 +16,9 @@
 2. Тесты для pytest django - проверил model , forms , view
 
 
+Четвертая часть.
+1.  docker run --name redis -p 6379:6379 -d redis
+
 [//]: # (список Shell комманд для заполнения справочников. )
 
 

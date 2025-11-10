@@ -6,6 +6,7 @@ from .forms import ProductModelForm,ProductDeleteForm
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy,reverse
 from django.contrib import messages
+from .tasks import log_new_product
 
 def index(request):
     """Главная страница. С возвратом каталога товаров мне нужна именно не как CVB """
@@ -77,6 +78,7 @@ class ProductCreateView(CreateView):
     def form_valid(self, form):
         """Сообщение об успешном создании товара"""
         messages.success(self.request, 'Товар успешно создан')
+        log_new_product(form.name)
         return super().form_valid(form)
 
 
