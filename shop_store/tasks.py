@@ -8,5 +8,6 @@ def log_new_product(new_prod: str):
 
 @shared_task
 def add(x,y):
+    """Для проверки постановки задачи"""
     time.sleep(2)
     return x+y

@@ -78,8 +78,9 @@ class ProductCreateView(CreateView):
     def form_valid(self, form):
         """Сообщение об успешном создании товара"""
         messages.success(self.request, 'Товар успешно создан')
-        log_new_product(form.name)
-        return super().form_valid(form)
+        response = super().form_valid(form)
+        log_new_product.delay(form.cleaned_data['name'])
+        return response
 
 
 

@@ -17,7 +17,10 @@
 
 
 Четвертая часть.
-1.  docker run --name redis -p 6379:6379 -d redis
+1.  docker run --name redis -p 6379:6379 -d redis  
+2.  для celery из doker windows нужно app.conf.worker_pool = 'gevent'
+3.  Запуск  celery -A config worker --loglevel=info -P solo
+4. 
 
 [//]: # (список Shell комманд для заполнения справочников. )
 
